@@ -19,11 +19,11 @@ public class ClosureSample {
         customers.add(new Customer("Toto", 24, "Manchester"));
         customers.add(new Customer("Tata", 28, "London"));
         customers.add(new Customer("Titi", 15, "Liverpool"));
+        final String computedCityValue = "Pessac";
         CollectionUtils.forAllDo(customers, new Closure() {
-            @Override
             public void execute(Object input) {
                 Customer customer = (Customer) input;
-                customer.setCity("Pessac");
+                customer.setCity(computedCityValue);
             }
         });
         System.out.println(customers);

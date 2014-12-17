@@ -21,7 +21,6 @@ public class ExistsSample {
         customers.add(new Customer("Tata", 28, "London"));
         customers.add(new Customer("Titi", 15, "Liverpool"));
         System.out.println(CollectionUtils.exists(customers, PredicateUtils.notPredicate(new Predicate() {
-            @Override
             public boolean evaluate(Object object) {
                 return ((Customer) object).getAge() > 28;
             }

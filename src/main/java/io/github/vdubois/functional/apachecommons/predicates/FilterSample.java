@@ -20,7 +20,6 @@ public class FilterSample {
         customers.add(new Customer("Tata", 28, "London"));
         customers.add(new Customer("Titi", 15, "Liverpool"));
         List<Customer> majorCustomers = (List<Customer>) CollectionUtils.select(customers, new Predicate() {
-            @Override
             public boolean evaluate(Object object) {
                 return ((Customer) object).getAge() > 18;
             }

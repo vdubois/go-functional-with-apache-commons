@@ -20,7 +20,6 @@ public class FindFirstSample {
         customers.add(new Customer("Tata", 28, "London"));
         customers.add(new Customer("Titi", 15, "Liverpool"));
         Customer firstMajorCustomer = (Customer) CollectionUtils.find(customers, new Predicate() {
-            @Override
             public boolean evaluate(Object object) {
                 return ((Customer) object).getAge() > 18;
             }

@@ -21,7 +21,6 @@ public class TransformSample {
         customers.add(new Customer("Tata", 28, "London"));
         customers.add(new Customer("Titi", 15, "Liverpool"));
         List<Customer> transformedCustomers = (List<Customer>) CollectionUtils.collect(customers, new Transformer() {
-            @Override
             public Object transform(Object input) {
                 return new CustomerDecorator((Customer) input);
             }
